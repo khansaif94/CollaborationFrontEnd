@@ -1,0 +1,14 @@
+HIIIII
+
+<div ng-controller="blogController as bctrl" ng-init="bctrl.getAllBlogs()">
+<table>
+<tr>
+<th>TITLE</th>
+<th>Date Added</th>
+</tr>
+<tr ng-repeat="b in blogs" >
+<td>{{b.title}}</td>
+<td>{{b.date_added}}</td>
+</tr>
+</table>
+</div>

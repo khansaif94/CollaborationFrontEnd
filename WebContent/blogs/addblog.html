@@ -1,0 +1,22 @@
+<div ng-controller="blogController as bctrl" >
+<form ng-submit="bctrl.saveBlog()" method="post">
+<div class="container">
+<div class="form-group">
+    <label for="title">Blog Title:</label>
+    <input type="title" placeholder="Blog Title" ng-model="blog.title" class="form-control" id="title" >
+  </div>
+
+<div class="form-group">
+    <label for="description">Blog Description:</label>
+    <input type="description" placeholder="Blog Description" ng-model="blog.description" class="form-control" id="description">
+  </div>
+
+<div class="form-group">
+    <label for="status">Blog Status:</label>
+    <input type="status" placeholder="Blog Status" ng-model="blog.status" class="form-control" id="status">
+  </div>
+
+<button type="submit" class="btn btn-info">Submit</button>
+  </div>
+</form>
+</div>
