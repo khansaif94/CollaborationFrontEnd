@@ -1,4 +1,6 @@
+<link rel="stylesheet"  type="text/css" href="resources/css/back1.css">
 <div ng-controller="blogController as bctrl" >
+<div ng-show="currentUser">
 <form ng-submit="bctrl.saveBlog()" method="post">
 <div class="container">
 <div class="form-group">
@@ -11,12 +13,11 @@
     <input type="description" placeholder="Blog Description" ng-model="blog.description" class="form-control" id="description">
   </div>
 
-<div class="form-group">
-    <label for="status">Blog Status:</label>
-    <input type="status" placeholder="Blog Status" ng-model="blog.status" class="form-control" id="status">
-  </div>
-
 <button type="submit" class="btn btn-info">Submit</button>
   </div>
 </form>
+</div>
+<div ng-show="!currentUser">
+<h1><a href="#!login"><b>Please Login First To Add New Blog!</b></a></h1>
+</div>
 </div>
